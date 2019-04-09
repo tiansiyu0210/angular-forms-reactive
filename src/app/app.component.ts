@@ -32,9 +32,9 @@ export class AppComponent implements OnInit{
   }
 
   userNameValidator(control: FormControl): {[s: string]: boolean} {
-    if(this.forbiddenUserNames.indexOf(control.value) !==  -1) {
+    if (this.forbiddenUserNames.includes(control.value)) {
       return {'badName': true};
     }
-    return null;
+    return {'badName': false};
   }
 }
