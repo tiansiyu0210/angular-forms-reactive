@@ -18,6 +18,7 @@
             id="email"
             formControlName="email"
             class="form-control">
+            <span class="help-block" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">please enter valid email</span>
         </div>
         <div class="radio" *ngFor="let gender of genders">
           <label>
